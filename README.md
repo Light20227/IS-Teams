@@ -1,2 +1,0 @@
-# IS-Teams
-Tech project
