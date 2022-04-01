@@ -1,25 +1,33 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32126.317
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR08", "SR08\SR08.csproj", "{EE8F9E73-23B3-4339-B40C-F61364E3C9A3}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EE8F9E73-23B3-4339-B40C-F61364E3C9A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE8F9E73-23B3-4339-B40C-F61364E3C9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE8F9E73-23B3-4339-B40C-F61364E3C9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE8F9E73-23B3-4339-B40C-F61364E3C9A3}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {43BD1FB5-5BC0-4E04-B548-2E69C94CB84E}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SR08
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        // Develop a code to check whether inputted
+        // number is Negative or positive
+
+            // Int Variable for Input number
+            Console.WriteLine("Enter number:");
+            int integer = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+
+            // Boolean Data type to determine 
+            // if Int input is Positive or Negative
+            if (integer > 0) 
+            Console.WriteLine("This integer is Positive");
+            else 
+            Console.WriteLine("This integer is Negative");
+
+            // Clear extra text
+            Console.ReadLine();
+
+        }
+    }
+}
