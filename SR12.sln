@@ -1,25 +1,64 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32126.317
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR12", "SR12\SR12.csproj", "{E650E934-04F0-47AD-B9BB-CEDCDE3B97A9}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E650E934-04F0-47AD-B9BB-CEDCDE3B97A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E650E934-04F0-47AD-B9BB-CEDCDE3B97A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E650E934-04F0-47AD-B9BB-CEDCDE3B97A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E650E934-04F0-47AD-B9BB-CEDCDE3B97A9}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E480F373-0669-4598-A36D-B71CF8EF7CC6}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SR12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double num1 = 0; double num2 = 0;
+         // Build a calculator by using conditional and Switch statement
+         // verbatim string literal to String statement
+
+            // String Statement application design that is made into a verbatim string literal 
+            Console.WriteLine(@"      /       |      \ /       -+-------------------+-      /       |     \ / ");
+            Console.WriteLine(@"   0 / 0   ---|---    \        Welcome to a Calculator   0 / 0   ---|---   \  ");
+            Console.WriteLine(@"    /         |      / \       -+-------------------+-    /         |     / \ ");
+            // add space
+            Console.WriteLine("");      
+            // Input variable Converted to a double type object 
+            Console.WriteLine("Type First number");
+            num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Type Second number");
+            num2 = Convert.ToDouble(Console.ReadLine());
+            // Opeation to Choose, a tab is added for each options
+            Console.WriteLine("Choose an opeation:");
+            Console.WriteLine("\ta - Add");
+            Console.WriteLine("\ts - Subtract");
+            Console.WriteLine("\tm - Multiply");
+            Console.WriteLine("\td - Divide");
+            Console.WriteLine("\tr - Reminder");
+
+            // Switch statement for all operation types
+            switch (Console.ReadLine())
+            {
+                //each string statements with a string literal with a Integer Variable
+                //Performs Arithmetic different operations
+                case "a":
+                    Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
+                    break;
+                case "s":
+                    Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
+                    break;
+                case "m":
+                    Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
+                    break;
+                case "d":
+
+                    Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
+                    
+                    break;
+                case "r":
+                    Console.WriteLine($"Your result: {num1} % {num2} = " + (num1 % num2));
+                    break;
+            }
+            //cler extra text
+            Console.ReadLine();
+        }        
+    }
+}
+
