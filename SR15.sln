@@ -1,25 +1,172 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32126.317
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR15", "SR15\SR15.csproj", "{F535C72C-E1D6-4628-B996-ED922F6704B2}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F535C72C-E1D6-4628-B996-ED922F6704B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F535C72C-E1D6-4628-B996-ED922F6704B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F535C72C-E1D6-4628-B996-ED922F6704B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F535C72C-E1D6-4628-B996-ED922F6704B2}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {23175E52-D758-4168-9466-172BEFC28214}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SR15
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        //Develop Rock Paper Scissors game by using the knowledge you gained this week
+
+            // Generate new Random value
+            Random random = new Random();
+            // boolean and string variables
+            bool playAgain = true;
+            String player;
+            String computer;
+            String answer;
+
+            // Displays Opening Design for the Game
+            Console.WriteLine("00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
+            Console.WriteLine("-------------------------------------------------0000000---------------------------------------------------------------");
+            Console.WriteLine("-----------------------------------------(WELCOME TO THE GAME)0--------------------------------------------------------");
+            Console.WriteLine("-------0------|======|----|-/-------------------------------------------0------|======|----|-/-------------------------");
+            Console.WriteLine("-----0---0----|------|----|/-----------(ROCK, PAPER, AND SCISSORS)----0---0----|------|----|/--------------------------");
+            Console.WriteLine("----0-----0---|------|----/------------------------------------------0-----0---|------|----/---------------------------");
+            Console.WriteLine("-----00000----|======|---oo----------------------0000000--------------00000----|======|---oo---------------------------");
+            Console.WriteLine("---------------------------------------------------000-----------------------------------------------------------------");
+            Console.WriteLine("00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000");
+
+
+            // Conditional statement forboolean playAgain
+            while (playAgain)
+            {
+                // String/ Reference variables
+                player = "";
+                computer = "";
+                answer = "";
+
+                // Conditional statement if player is not equal to
+                while (player != "ROCK" && player != "PAPER" && player != "SCISSORS")
+                {
+                    // Reads Input value and convert it to Uppercase
+                    Console.WriteLine();
+                    Console.Write("Enter ROCK, PAPER, or SCISSORS: ");
+                    player = Console.ReadLine();
+                    player = player.ToUpper();
+                }
+                //Conditional Statement for random generator
+                //Genrates Random values for computer
+                switch (random.Next(1, 4))
+                {
+                    case 1:
+                        computer = "ROCK";
+                        break;
+                    case 2:
+                        computer = "PAPER";
+                        break;
+                    case 3:
+                        computer = "SCISSORS";
+                        break;
+                }
+                // Displays the Result 
+                Console.WriteLine("Player: " + player);
+                Console.WriteLine("Computer: " + computer);
+
+                // Conditional statement for player
+                // Displays the reult score of the
+                // game for player and computer
+                switch (player)
+                {
+                    case "ROCK":
+                        if (computer == "ROCK")
+                        {
+                            Console.WriteLine("It's a draw!");
+                        }
+                        else if (computer == "PAPER")
+                        {
+                            Console.WriteLine("You lose!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You win!");
+                        }
+                        break;
+                    case "PAPER":
+                        if (computer == "ROCK")
+                        {
+                            Console.WriteLine("You win!");
+                        }
+                        else if (computer == "PAPER")
+                        {
+                            Console.WriteLine("It's a draw!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You lose!");
+                        }
+                        break;
+                    case "SCISSORS":
+                        if (computer == "ROCK")
+                        {
+                            Console.WriteLine("You lose!");
+                        }
+                        else if (computer == "PAPER")
+                        {
+                            Console.WriteLine("You win!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("It's a draw!");
+                        }
+                        break;
+                }
+
+                // String statement Converted to uppercase
+                Console.Write("Would you like to Try again? (Y/N): ");
+                answer = Console.ReadLine();
+                answer = answer.ToUpper();
+                
+                // boolean expression for andswer and playAgain
+                if (answer == "Y")
+                {
+                    playAgain = true;
+                }
+
+                else
+                {
+                    playAgain = false;
+                }
+
+            }
+            //Adds Space
+            Console.WriteLine("");
+            // Displays statemnts Design if game will not continue
+            Console.WriteLine("                -------------------------------------------------------------------------");
+            Console.WriteLine("                ---------------------------8888888888888888888---------------------------");
+            Console.WriteLine("                -------------------------------00000000000-------------------------------");
+            Console.WriteLine("                -------------------------------------------------------------------------");
+            Console.WriteLine("                -------------0000000--0-----0-----0-----0----0---0----0------------------");
+            Console.WriteLine("                ----------------0-----0-----0----000----0----0---0---0-------------------");
+            Console.WriteLine("                ----------------0-----0000000---0---0---0-0--0---0-0---------------------");
+            Console.WriteLine("                ----------------0-----0-----0--0000000--0--0-0---0--0--------------------");
+            Console.WriteLine("                ----------------0-----0-----0--0-----0--0----0---0---0-------------------");
+            Console.WriteLine("                -------------------------------------------------------------------------");
+            Console.WriteLine("                -----------000-----------0----0---000---0---0-----------000--------------");
+            Console.WriteLine("                -----00000-=-0------------0-0----0---0--0---0-----------0-=-00000--------");
+            Console.WriteLine("                -----000000---0------------0-----0---0--0---0----------0---000000--------");
+            Console.WriteLine("                -----000000----0-----------0------000----000----------0----000000--------");
+            Console.WriteLine("                -----00000----0----------------------------------------0----00000--------");
+            Console.WriteLine("                -------0--0--0-------------00000---000---0---0-----------0--0--0---------");
+            Console.WriteLine("                -------0000000-------------0------0---0--0-0-------------0000000---------");
+            Console.WriteLine("                -------0-----0-------------00000--0---0--0---------------0-----0---------");
+            Console.WriteLine("                ---------------------------0-------000---0-------------------------------");
+            Console.WriteLine("                -------------------------------------------------------------------------");
+            Console.WriteLine("                --------------00000----0----------0-----0---0--00000--0-----0---0000-----");
+            Console.WriteLine("                --------------0----0---0---------000-----0-0-----0----0-0---0--0---------");
+            Console.WriteLine("                --------------0----0---0--------0---0-----0------0----0--0--0--0--000----");
+            Console.WriteLine("                --------------00000----0-------0000000----0------0----0---0-0--0----0----");
+            Console.WriteLine("                --------------0--------000000--0-----0----0----00000--0-----0---0000-----");
+            Console.WriteLine("                -------------------------------------------------------------------------");
+            Console.WriteLine("                -------------------------------000000000000------------------------------");
+            Console.WriteLine("                ----------------------------0000000000000000000--------------------------");
+            Console.WriteLine("                -------------------------------------------------------------------------");
+            //Clears extra text 
+            Console.ReadKey();
+        }
+    }
+}
