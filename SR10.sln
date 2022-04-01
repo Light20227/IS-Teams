@@ -1,25 +1,44 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32126.317
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR10", "SR10\SR10.csproj", "{14828D4F-2B3B-402D-B04E-3CFAE1A7279B}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{14828D4F-2B3B-402D-B04E-3CFAE1A7279B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14828D4F-2B3B-402D-B04E-3CFAE1A7279B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14828D4F-2B3B-402D-B04E-3CFAE1A7279B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14828D4F-2B3B-402D-B04E-3CFAE1A7279B}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {838C983B-5B1B-49EA-98EC-9F57F659176C}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SR10
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        // Develop a code to check whether an
+        // entered number is even or odd
+
+            // Reference Integer
+            int number, remain;
+            // Input value converts to an Integer value
+            Console.WriteLine("Enter Number: ");
+            number = Convert.ToInt32(Console.ReadLine());
+
+            // Arithmetic operation
+            remain = number % 2;
+
+            // Boolean Data Type
+            if (remain == 0)
+            {
+                Console.WriteLine("");
+                //Insert Integer variable to Statement
+                Console.WriteLine($"Result: {number} is an Even Number");
+            }
+                
+            else
+            {
+                Console.WriteLine("");
+                //Insert Integer variable to Statement
+                Console.WriteLine($"Result: {number} is an Odd Number");
+                Console.WriteLine("");
+            }
+            // Clear extra text
+            Console.ReadKey();
+        }
+    }
+}
