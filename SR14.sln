@@ -1,25 +1,37 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32126.317
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR14", "SR14\SR14.csproj", "{02E3CAD1-B264-4DCF-AEF9-7761E77F7D4A}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{02E3CAD1-B264-4DCF-AEF9-7761E77F7D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02E3CAD1-B264-4DCF-AEF9-7761E77F7D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02E3CAD1-B264-4DCF-AEF9-7761E77F7D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02E3CAD1-B264-4DCF-AEF9-7761E77F7D4A}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A9787044-640D-4DC3-84A7-719BBE832193}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SR14
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // Develop a code to reverse the digits of a number
+
+            // a String Input Converted to an Integer variable
+            Console.WriteLine("Please Enter Number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            // Integer Variables equals to zero
+            int rem, rev = 0;
+
+            //Conditional statement
+            while (num >0)
+            {
+                // Code  execution
+                // Arithmetic operators
+                rem = num % 10;
+                num = num / 10;
+                rev = (rev * 10) + rem;
+            }
+            // Displays statement Result
+            Console.WriteLine( "In Reverse is " + (rev));
+            // Clear extra texts
+            Console.ReadKey();
+        }
+    }
+}
+
