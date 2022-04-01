@@ -1,25 +1,37 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32126.317
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR11", "SR11\SR11.csproj", "{C2C83D87-7C64-4CCF-B5C7-8A920B3F12C5}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C2C83D87-7C64-4CCF-B5C7-8A920B3F12C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2C83D87-7C64-4CCF-B5C7-8A920B3F12C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2C83D87-7C64-4CCF-B5C7-8A920B3F12C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2C83D87-7C64-4CCF-B5C7-8A920B3F12C5}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B409BD44-BB9A-46B3-9B5B-6A82C49F5F4C}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SR11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        // Develop a code to generate the grades of students based on marks they have scored
+
+            // Data Input statemnts with a string and a integer variable value
+            Console.WriteLine("Enter Name : ");
+            string n = Console.ReadLine();
+            Console.WriteLine("Mark Score (1-100)");
+            // Integer Input value Boolean Function if student Pass or Fail
+            int s = Convert.ToInt32(Console.ReadLine());
+            {
+                //Integer value represent grade input
+                int grade = s;
+                Console.WriteLine();
+                //Boolean if/ else Statement
+                if (s > 75)
+                //String Statement with a Name string and a Score Integer value
+                Console.WriteLine("The Student: " + n + " With a Marking Score of :" + "(" + s + ")" + " is a PASS");
+                else
+                //String Statement with a Name string and a Score Integer value
+                    Console.WriteLine("The Student: " + n + " With a Marking Score of :" + "(" + s + ")" + " is a FAIL");
+                Console.ReadLine();
+            }
+
+        }
+    }
+}
