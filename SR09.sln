@@ -1,25 +1,28 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32126.317
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR09", "SR09\SR09.csproj", "{6436F4F9-8597-4381-BEE3-31EC94C98830}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6436F4F9-8597-4381-BEE3-31EC94C98830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6436F4F9-8597-4381-BEE3-31EC94C98830}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6436F4F9-8597-4381-BEE3-31EC94C98830}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6436F4F9-8597-4381-BEE3-31EC94C98830}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {19166043-3977-4D52-A3CF-EC86CADAC002}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SR09
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        // David is 19 years old and Luke is 17 years old. Develop
+        // a code to check by how many years Luke is younger than David.
+
+            // Int Reference for Age Value for each Variable Name
+            int David = 19;
+            int Luke = 17;
+
+            // Arithmetic operation using modulus for remainder
+            //Insert two Integer Value to Statement
+            Console.WriteLine("Luke is Younger than David for " + David % Luke + " Years");
+
+            // Clears extra text
+            Console.ReadLine();
+        }
+    }
+}
