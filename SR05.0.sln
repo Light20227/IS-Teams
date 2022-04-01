@@ -1,25 +1,46 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32126.317
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR05.0", "SR05.0\SR05.0.csproj", "{9C0A8EEB-5886-4473-976F-52C633E14F80}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C0A8EEB-5886-4473-976F-52C633E14F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C0A8EEB-5886-4473-976F-52C633E14F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C0A8EEB-5886-4473-976F-52C633E14F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C0A8EEB-5886-4473-976F-52C633E14F80}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0370A1AA-33C4-47A5-B3C7-FA910D1BAC8E}
-	EndGlobalSection
-EndGlobal
+// Main Method
+// Reference Data type
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+//Project name is SR05
+namespace SR05._0
+{
+    internal class Program
+    {
+        // Main method/Function
+        static void Main(string[] args)
+        {
+        //Create a program to gather information//
+
+          //Student Details 
+            //Data Input and string Variables for each//
+            Console.WriteLine("What is Your Name?");
+            String myname = Console.ReadLine();
+            Console.WriteLine("What is Your High School?");
+            String HighSchool = Console.ReadLine();
+            Console.WriteLine("What is Your Techtorium ID?");
+            String Id = Console.ReadLine();
+            Console.WriteLine("What is Your Trainer Name?");
+            String Trainer = Console.ReadLine();
+            Console.WriteLine("What is Your Contact Number?");
+            String Contact = Console.ReadLine();
+            Console.WriteLine("What is Your Hobby?");
+            String Hobby = Console.ReadLine();
+            //Data Output for all Variables Iputs//
+            Console.WriteLine();
+            Console.WriteLine("Student Details: ");
+            Console.WriteLine();
+            Console.WriteLine("My name is : " + myname);
+            Console.WriteLine("My HigSchool is : " + HighSchool);
+            Console.WriteLine("My Student ID is : " + Id);
+            Console.WriteLine("My Trainer is : " + Trainer);
+            Console.WriteLine("My Constact number is : " + Contact);
+            Console.WriteLine("My Hobby is : " + Hobby);
+            Console.ReadLine();
+        }
+    }
+}
